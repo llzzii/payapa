@@ -1,0 +1,66 @@
+<div class="page-title">
+  <h4>项目列表</h4>
+
+</div>
+
+<div class="padding-content area-col-white">
+  <div class="table-top ">
+
+
+    <div class="table-operations clearfix ">
+      <div class="pull-left">
+
+        <app-create (getProjectDatas)="getProjectDatas()"></app-create>
+      </div>
+      <div class="pull-right">
+        <button nz-button class="table-top-opt" (click)="getProjectDatas(true)">
+          <i class="iconfont icon-shuaxin"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nz-table #nzTable [nzData]="dataSet" nzShowSizeChanger nzSize="middle" [nzShowTotal]="rangeTemplate"
+    [nzLoading]="isLoading" [nzHideOnSinglePage]="totalCount <= 10" (nzPageIndexChange)="getProjectDatas()"
+    (nzPageSizeChange)="getProjectDatas()">
+    <thead>
+      <tr>
+        <th nzWidth="180px">ID/名称</th>
+        <th nzWidth="80px">请求方式</th>
+        <th nzWidth="120px">Url</th>
+        <th nzWidth="120px">Header</th>
+        <th nzWidth="120px">Body</th>
+        <th nzWidth="120px">参数</th>
+        <th nzWidth="180px">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of nzTable.data; let i = index">
+        <td>
+          <p nz-popover [nzPopoverContent]="data._id" class="ellipsis">
+            <a><span class="ellipsis before-opt">{{data._id}}</span></a>
+          </p>
+          <p class="ellipsis">
+            <span nz-popover [nzPopoverContent]="data.name">{{data.name}}</span>
+          </p>
+        </td>
+        <td>{{data.method || '--'}}</td>
+        <td>{{data.url || '--'}}</td>
+        <td>{{data.headerList | json  }}</td>
+        <td>{{data.bodyList | json  }}</td>
+        <td>
+          <p>{{data.paramsList | json  }}</p>
+        </td>
+
+        <td class="table-opt">
+
+          <app-action (getProjectDatas)="getProjectDatas()" [rowData]="data"></app-action>
+        </td>
+      </tr>
+    </tbody>
+
+    <ng-template #rangeTemplate let-range="range" let-total>
+      <!--第{{range[0]}}-{{range[1]<=total ? range[1] : total}}条 -->共{{total}}条
+    </ng-template>
+  </nz-table>
+
+</div>

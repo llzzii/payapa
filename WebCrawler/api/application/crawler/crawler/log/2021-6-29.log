@@ -1,0 +1,1309 @@
+2021-06-29 17:01:24 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:01:24 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:01:24 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:01:25 [scrapy.extensions.telnet] INFO: Telnet Password: 97c9e96abee45a9a
+2021-06-29 17:01:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:01:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:01:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:01:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:01:25 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:01:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:01:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:01:25 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:01:25 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:01:25 [scrapy.core.scraper] ERROR: Error processing {'title': '2021年你可能不知道的 CSS 特性（下篇）', 'brief_content': '在这个话题中主要整理了有关于 CSS 方面的特性，并且尽可能的整理了一些大家现在能用或过不了多久就能用的属性。另外，虽然标题是“新特性”，但其中有蛮多特性并不是“新”，可能已经出现在你的项目中', 'user_name': '淘系前端团队', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '产品经理：鸿蒙那个开场动画挺帅的 给咱们页面也整一个呗', 'brief_content': '有一天开会，产品经理问：大家都升鸿蒙系统了么？紧接着一群人答：我们都用iPhone… 当然哈，我自己用的是安卓，不过也不是华为(留下了没钱的泪水)… 听了他这么一问我还以为这是要让我们开发鸿蒙应用了呢', 'user_name': '手撕红黑树', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '三千文字，只为写好一个 Function.prototype.call', 'brief_content': 'Function.prototype.call，手写系列，万文面试系列，必会系列必包含的内容，足见其在前端的分量。 本文基于MDN 和 ECMA 标准，和大家一起从新认识call。', 'user_name': '云的世界', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': 'WOC！原来 Linux 终端下居然还有进程记帐功能？！', 'brief_content': '在系统管理中，有时需要记录用户对资源的消费情况，作为对用户账号收取费用的依据。这些日志也可以用于安全目的，提供有关系统活动的有价值的信息。', 'user_name': '杰哥的IT之旅', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '使用 vscode 省时的6个插件', 'brief_content': '使用 Visual Studio Code 开发项目省时的六个插件。 1. vscode-icon 不同的文件展示不同的图标，方便快速识别文件类型。 2. Color Highlight 颜色标记。 ', 'user_name': 'Jimmy', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '「微信小程序」生成水印原理与插件编写', 'brief_content': '一 前言 今天分享一个小程序生成水印的小技巧——canvas绘制背景图，接下来我会详细介绍绘制的细节。希望开发过微信小程序的同学可以把文章收藏起来，这样如果以后遇到类似的需求，可以翻出来作为参考。 本', 'user_name': '我不是外星人', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': 'three.js 实现风暴云特效', 'brief_content': '大家好，这里是 CSS兼WebGL 魔法使——alphardex。 本文我们将用three.js来实现风暴云特效，一起来创作吧！', 'user_name': 'alphardex', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '手写系列-实现一个铂金段位的 React', 'brief_content': '本文实现简单版本的 React，参考 React 16.8 的基本功能，包括虚拟 DOM、Fiber、Diff 算法、函数式组件、hooks 等。', 'user_name': '清汤饺子', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '漫画 | 如果面试时大家都说真话…', 'brief_content': '画面过于真实，易引起不适请慎入……面试造火箭 入职拧螺丝 是当前职场的中最美风景线 面试时的高标准、严要求 实际工作却是修修补补或做着忙碌但无关紧要的事情 为什么会出现这种现象呢？', 'user_name': '苏南', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '起诉书！慕课网你敢抄袭，我就敢起诉你！', 'brief_content': '这周就开始走起诉流程啦！最近也在看《中国著作权法》和《中华人民共和国刑法》中的一些法律条文，正常情况下，一个程序员也不会去看这些法律文件的，但是生活中总有意外。', 'user_name': '程序员十三', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '还在迟疑是否上ts？先上车再说！vue3+ts开发初体验', 'brief_content': '文本主要结合案例体验一下vue3+ts开发的实际效果。到底适不适合你和你的项目，还得根据各位看官自己掌握程度和项目实际情况综合判断。', 'user_name': '杨村长', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '《Bootstrap5零基础到精通》第26节 Bootstrap5模态弹框Modal组件用法', 'brief_content': '这是我参与更文挑战的第26天，活动详情查看： 更文挑战 26.1 Bootstrap5模态弹框工作原理 使用Bootstrap的JavaScript模式插件将对话框添加到站点中，用于灯箱、用户通知或完', 'user_name': '俺老刘', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '三天三夜，整理了30张高清思维导图 | 带你重温ES6（下）', 'brief_content': '最近重新学习ES6，我将核心知识汇总整理成脑图~~建议收藏，说不定某天要看一眼！！~~~~~~~~~', 'user_name': 'LBJ', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '解放生产力，自动化生成Vue组件文档', 'brief_content': '一、现状 Vue框架在前端开发中应用广泛，当一个多人开发的Vue项目经过长期维护之后往往会沉淀出很多的公共组件，这个时候经常会出现一个人 开发了一个组件而其他维护者或新接手的人却不知道这个组件是做什么', 'user_name': '一只花喵', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '《Bootstrap5零基础到精通》第27节 Bootstrap5弹出提示和工具提示组件用法', 'brief_content': '这是我参与更文挑战的第27天，活动详情查看： 更文挑战 27.1 概述 这几要讲两个控件：弹出提示（Popovers）和工具提示（Tooltips），这两个组件功能都很单一，用法也很简单，有很多相似之', 'user_name': '俺老刘', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '有趣的 Kotlin 0x01：Scala-like functions', 'brief_content': '0x01：Scala-like functions 以上代码，运行结果为何？可选项： Does not compile Prints "Hello, World" Nothing Something ', 'user_name': '易冬', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '一个高性能、小而美的序列化工具！', 'brief_content': '作者：fredalxin\\ 地址：https://fredal.xin/kryo-quickstart Kryo是一个高性能的序列化/反序列化工具，由于其变长存储特性并使用了字节码生成机制，拥有较', 'user_name': 'Java技术栈', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '前端应该掌握的编译基础（基于 babel）', 'brief_content': '开发息息相关 虽然 Babel 团队在各种哭穷，但是 Babel 始终是我们前端在开发中不可或缺的重要工具。 虽然我们只是 API 调用工，但是多了解一些总是会有好处的嘛 ☄️☄️☄️', 'user_name': '陈大鱼头', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': '14万字 | 400 多道 JavaScript 面试题 🎓 有答案 🌠(第二部分 101-200题)', 'brief_content': '这是我参与更文挑战的第28天，活动详情查看： 更文挑战 14万字 | 400 多道 JavaScript 面试题 🎓 有答案 🌠(第二部分 101-200题)', 'user_name': '海拥', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.core.scraper] ERROR: Error processing {'title': 'Django Rest Framework 源码解读（ 六）分页功能', 'brief_content': '这是我参与更文挑战的第18天，活动详情查看： 更文挑战 一、分页介绍 分页有三种方式 普通分页，看第n页，每页显示m条数据； 切割分页，在n个位置，向后查看m条数据； 加密分页，这与普通分页方式相似，', 'user_name': 'Honest1y', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:01:26 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:01:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:01:26 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\JsonExporterPipleline.py", line 22, in close_spider
+    self.log("爬虫结束", logging.INFO)
+AttributeError: 'JsonExporterPipleline' object has no attribute 'log'
+2021-06-29 17:01:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15598,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.755341,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 1, 26, 127229),
+ 'log_count/ERROR': 24,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 1, 25, 371888)}
+2021-06-29 17:01:26 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:13:13 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:13:13 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:13:13 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:13:13 [scrapy.extensions.telnet] INFO: Telnet Password: 9e51a23e96faf22f
+2021-06-29 17:13:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:13:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:13:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:13:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:13:13 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:13:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:13:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:13:14 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:13:14 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '2021年你可能不知道的 CSS 特性（下篇）', 'brief_content': '在这个话题中主要整理了有关于 CSS 方面的特性，并且尽可能的整理了一些大家现在能用或过不了多久就能用的属性。另外，虽然标题是“新特性”，但其中有蛮多特性并不是“新”，可能已经出现在你的项目中', 'user_name': '淘系前端团队', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '产品经理：鸿蒙那个开场动画挺帅的 给咱们页面也整一个呗', 'brief_content': '有一天开会，产品经理问：大家都升鸿蒙系统了么？紧接着一群人答：我们都用iPhone… 当然哈，我自己用的是安卓，不过也不是华为(留下了没钱的泪水)… 听了他这么一问我还以为这是要让我们开发鸿蒙应用了呢', 'user_name': '手撕红黑树', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '三千文字，只为写好一个 Function.prototype.call', 'brief_content': 'Function.prototype.call，手写系列，万文面试系列，必会系列必包含的内容，足见其在前端的分量。 本文基于MDN 和 ECMA 标准，和大家一起从新认识call。', 'user_name': '云的世界', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': 'WOC！原来 Linux 终端下居然还有进程记帐功能？！', 'brief_content': '在系统管理中，有时需要记录用户对资源的消费情况，作为对用户账号收取费用的依据。这些日志也可以用于安全目的，提供有关系统活动的有价值的信息。', 'user_name': '杰哥的IT之旅', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '使用 vscode 省时的6个插件', 'brief_content': '使用 Visual Studio Code 开发项目省时的六个插件。 1. vscode-icon 不同的文件展示不同的图标，方便快速识别文件类型。 2. Color Highlight 颜色标记。 ', 'user_name': 'Jimmy', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '「微信小程序」生成水印原理与插件编写', 'brief_content': '一 前言 今天分享一个小程序生成水印的小技巧——canvas绘制背景图，接下来我会详细介绍绘制的细节。希望开发过微信小程序的同学可以把文章收藏起来，这样如果以后遇到类似的需求，可以翻出来作为参考。 本', 'user_name': '我不是外星人', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': 'three.js 实现风暴云特效', 'brief_content': '大家好，这里是 CSS兼WebGL 魔法使——alphardex。 本文我们将用three.js来实现风暴云特效，一起来创作吧！', 'user_name': 'alphardex', 'tags': [None, None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '手写系列-实现一个铂金段位的 React', 'brief_content': '本文实现简单版本的 React，参考 React 16.8 的基本功能，包括虚拟 DOM、Fiber、Diff 算法、函数式组件、hooks 等。', 'user_name': '清汤饺子', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '漫画 | 如果面试时大家都说真话…', 'brief_content': '画面过于真实，易引起不适请慎入……面试造火箭 入职拧螺丝 是当前职场的中最美风景线 面试时的高标准、严要求 实际工作却是修修补补或做着忙碌但无关紧要的事情 为什么会出现这种现象呢？', 'user_name': '苏南', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '起诉书！慕课网你敢抄袭，我就敢起诉你！', 'brief_content': '这周就开始走起诉流程啦！最近也在看《中国著作权法》和《中华人民共和国刑法》中的一些法律条文，正常情况下，一个程序员也不会去看这些法律文件的，但是生活中总有意外。', 'user_name': '程序员十三', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '还在迟疑是否上ts？先上车再说！vue3+ts开发初体验', 'brief_content': '文本主要结合案例体验一下vue3+ts开发的实际效果。到底适不适合你和你的项目，还得根据各位看官自己掌握程度和项目实际情况综合判断。', 'user_name': '杨村长', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '《Bootstrap5零基础到精通》第26节 Bootstrap5模态弹框Modal组件用法', 'brief_content': '这是我参与更文挑战的第26天，活动详情查看： 更文挑战 26.1 Bootstrap5模态弹框工作原理 使用Bootstrap的JavaScript模式插件将对话框添加到站点中，用于灯箱、用户通知或完', 'user_name': '俺老刘', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '2K Star！超过 50 个专题、450 个好项目，大半年来推荐过的重磅项目合集 👍', 'brief_content': '这大半年来，猫哥已经推荐过超过 50个专题， 450 个超级好的开源项目了，今天把往期推荐过的文章与项目做个合集吧，方便大家能快速得查阅到想要的项目。', 'user_name': '天明夜尽', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '三天三夜，整理了30张高清思维导图 | 带你重温ES6（下）', 'brief_content': '最近重新学习ES6，我将核心知识汇总整理成脑图~~建议收藏，说不定某天要看一眼！！~~~~~~~~~', 'user_name': 'LBJ', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '解放生产力，自动化生成Vue组件文档', 'brief_content': '一、现状 Vue框架在前端开发中应用广泛，当一个多人开发的Vue项目经过长期维护之后往往会沉淀出很多的公共组件，这个时候经常会出现一个人 开发了一个组件而其他维护者或新接手的人却不知道这个组件是做什么', 'user_name': '一只花喵', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '《Bootstrap5零基础到精通》第27节 Bootstrap5弹出提示和工具提示组件用法', 'brief_content': '这是我参与更文挑战的第27天，活动详情查看： 更文挑战 27.1 概述 这几要讲两个控件：弹出提示（Popovers）和工具提示（Tooltips），这两个组件功能都很单一，用法也很简单，有很多相似之', 'user_name': '俺老刘', 'tags': [None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '有趣的 Kotlin 0x01：Scala-like functions', 'brief_content': '0x01：Scala-like functions 以上代码，运行结果为何？可选项： Does not compile Prints "Hello, World" Nothing Something ', 'user_name': '易冬', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '一个高性能、小而美的序列化工具！', 'brief_content': '作者：fredalxin\\ 地址：https://fredal.xin/kryo-quickstart Kryo是一个高性能的序列化/反序列化工具，由于其变长存储特性并使用了字节码生成机制，拥有较', 'user_name': 'Java技术栈', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': '14万字 | 400 多道 JavaScript 面试题 🎓 有答案 🌠(第二部分 101-200题)', 'brief_content': '这是我参与更文挑战的第28天，活动详情查看： 更文挑战 14万字 | 400 多道 JavaScript 面试题 🎓 有答案 🌠(第二部分 101-200题)', 'user_name': '海拥', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [scrapy.core.scraper] ERROR: Error processing {'title': 'Django Rest Framework 源码解读（ 六）分页功能', 'brief_content': '这是我参与更文挑战的第18天，活动详情查看： 更文挑战 一、分页介绍 分页有三种方式 普通分页，看第n页，每页显示m条数据； 切割分页，在n个位置，向后查看m条数据； 加密分页，这与普通分页方式相似，', 'user_name': 'Honest1y', 'tags': [None, None]}
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\Python3.7.6\lib\site-packages\scrapy\utils\defer.py", line 157, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\pipelines.py", line 27, in process_item
+    self.log("DB添加数据", logging.INFO)
+AttributeError: 'CrawlerPipeline' object has no attribute 'log'
+2021-06-29 17:13:14 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:13:14 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:13:14 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\JsonExporterPipleline.py", line 22, in close_spider
+    self.log("爬虫结束", logging.INFO)
+AttributeError: 'JsonExporterPipleline' object has no attribute 'log'
+2021-06-29 17:13:15 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15521,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.178848,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 13, 14, 998338),
+ 'log_count/ERROR': 24,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 13, 13, 819490)}
+2021-06-29 17:13:15 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:18:04 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:18:04 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:18:04 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:18:04 [scrapy.extensions.telnet] INFO: Telnet Password: 1c05228b25b61dbb
+2021-06-29 17:18:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:18:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:18:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:18:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:18:04 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:18:04 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:18:04 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:18:05 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:18:05 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:18:05 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:18:05 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:18:05 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:18:05 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:18:05 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\JsonExporterPipleline.py", line 22, in close_spider
+    self.log("爬虫结束", logging.INFO)
+AttributeError: 'JsonExporterPipleline' object has no attribute 'log'
+2021-06-29 17:18:05 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15678,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.836761,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 18, 5, 649987),
+ 'item_scraped_count': 20,
+ 'log_count/ERROR': 4,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 18, 4, 813226)}
+2021-06-29 17:18:05 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:20:45 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:20:45 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:20:45 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:20:45 [scrapy.extensions.telnet] INFO: Telnet Password: ba124921e6b13bb6
+2021-06-29 17:20:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:20:46 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:20:46 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:20:46 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:20:46 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:20:46 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:20:46 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:20:48 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:20:48 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:20:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:20:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 492,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 9030,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.778244,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 20, 48, 621811),
+ 'item_scraped_count': 10,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 20, 46, 843567)}
+2021-06-29 17:20:48 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:23:12 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:23:12 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:23:12 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:23:12 [scrapy.extensions.telnet] INFO: Telnet Password: dd4c64659e5d5457
+2021-06-29 17:23:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:23:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:23:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:23:13 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:23:13 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:23:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:23:13 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:23:13 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:23:13 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:24:41 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 1 items (at 1 items/min)
+2021-06-29 17:24:41 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:24:41 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:24:41 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:24:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:24:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15770,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 88.499743,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 24, 41, 656278),
+ 'item_scraped_count': 20,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 13,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 23, 13, 156535)}
+2021-06-29 17:24:41 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:25:11 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:25:11 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:25:11 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:25:11 [scrapy.extensions.telnet] INFO: Telnet Password: 9c0c93e738e73db8
+2021-06-29 17:25:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:25:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:25:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:25:12 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:25:12 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:25:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:25:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:25:13 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:25:13 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:25:13 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:25:13 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:25:13 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:25:13 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:25:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.008305,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 25, 13, 934844),
+ 'item_scraped_count': 20,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 25, 12, 926539)}
+2021-06-29 17:25:13 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:25:14 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:25:14 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:25:14 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:25:14 [scrapy.extensions.telnet] INFO: Telnet Password: 1c1f629f54eb9a53
+2021-06-29 17:25:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:25:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:25:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:25:15 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:25:15 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:25:15 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:25:15 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:25:16 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:25:16 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:25:16 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:25:16 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 492,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 8970,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 1.233701,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 25, 16, 708426),
+ 'item_scraped_count': 10,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 25, 15, 474725)}
+2021-06-29 17:25:16 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 17:26:30 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 17:26:30 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 17:26:30 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 17:26:30 [scrapy.extensions.telnet] INFO: Telnet Password: e0b5d33a016855b2
+2021-06-29 17:26:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 17:26:30 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 17:26:30 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 17:26:30 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 17:26:30 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 17:26:30 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 17:26:30 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 17:26:31 [project_crawler] INFO: 数据处理开始
+2021-06-29 17:26:31 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:26:31 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:26:31 [project_crawler] ERROR: 数据处理失败,失败原因'NoneType' object has no attribute 'get'
+2021-06-29 17:26:31 [project_crawler] INFO: 数据处理结束
+2021-06-29 17:26:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 17:26:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 478,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/POST': 1,
+ 'downloader/response_bytes': 15784,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'elapsed_time_seconds': 0.835763,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 9, 26, 31, 486681),
+ 'item_scraped_count': 20,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 9, 26, 30, 650918)}
+2021-06-29 17:26:31 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:18:36 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:18:36 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:18:36 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:18:36 [scrapy.extensions.telnet] INFO: Telnet Password: 119555aea4437df8
+2021-06-29 20:18:36 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:18:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:18:37 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:18:37 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:18:37 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:18:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:18:37 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:18:47 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-29 20:18:47 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:18:47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 380,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 687,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 9.905539,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 18, 47, 817567),
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 18, 37, 912028)}
+2021-06-29 20:18:47 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:26:10 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:26:10 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:26:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:26:10 [scrapy.extensions.telnet] INFO: Telnet Password: d460378498deccfe
+2021-06-29 20:26:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:26:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:26:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:26:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:26:11 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:26:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:26:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:26:11 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param += val+"&&"
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2021-06-29 20:26:11 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:26:11 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.058842,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 26, 11, 272400),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 26, 11, 213558)}
+2021-06-29 20:26:11 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:29:28 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:29:28 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:29:28 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:29:28 [scrapy.extensions.telnet] INFO: Telnet Password: 1f8e3627c6976f07
+2021-06-29 20:29:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:29:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:29:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:29:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:29:28 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:29:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:29:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:29:28 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param = param + val+"&&"
+TypeError: can only concatenate str (not "int") to str
+2021-06-29 20:29:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:29:28 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 0.030917,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 29, 28, 982185),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 29, 28, 951268)}
+2021-06-29 20:29:28 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:30:13 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:30:13 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:30:14 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:30:14 [scrapy.extensions.telnet] INFO: Telnet Password: 64446a8364c5b51f
+2021-06-29 20:30:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:30:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:30:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:30:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:30:14 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:30:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:30:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:31:24 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param = param +param_item['keys']+'='+ val+"&&"
+TypeError: can only concatenate str (not "int") to str
+2021-06-29 20:31:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:31:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 70.289331,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 31, 24, 805106),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 30, 14, 515775)}
+2021-06-29 20:31:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:31:50 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:31:50 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:31:50 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:31:50 [scrapy.extensions.telnet] INFO: Telnet Password: e294ec9f47f69be3
+2021-06-29 20:31:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:31:50 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:31:50 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:31:51 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:31:51 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:31:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:31:51 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:31:56 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param = param + param_item['keys']+'=' + val+"&&"
+TypeError: can only concatenate str (not "int") to str
+2021-06-29 20:31:56 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:31:56 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 5.009612,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 31, 56, 34162),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 31, 51, 24550)}
+2021-06-29 20:31:56 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:32:27 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:32:27 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:32:27 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:32:27 [scrapy.extensions.telnet] INFO: Telnet Password: 8f25c843332454b7
+2021-06-29 20:32:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:32:28 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:32:28 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:32:28 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:32:28 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:32:28 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:32:28 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:33:09 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param = param + param_item['keys']+'=' + val+"&&"
+TypeError: can only concatenate str (not "int") to str
+2021-06-29 20:33:09 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:33:09 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 41.690371,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 33, 9, 797084),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 32, 28, 106713)}
+2021-06-29 20:33:09 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:33:28 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:33:28 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:33:28 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:33:28 [scrapy.extensions.telnet] INFO: Telnet Password: 20f3e7955a084f80
+2021-06-29 20:33:28 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:33:29 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:33:29 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:33:29 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:33:29 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:33:29 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:33:29 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:34:37 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\scrapy\core\engine.py", line 129, in _next_request
+    request = next(slot.start_requests)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 40, in start_requests
+    param = param + param_item['keys']+'=' + val+"&&"
+TypeError: can only concatenate str (not "int") to str
+2021-06-29 20:34:37 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:34:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'elapsed_time_seconds': 68.358128,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 34, 37, 492068),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 10,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 33, 29, 133940)}
+2021-06-29 20:34:37 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-29 20:35:14 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-29 20:35:14 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-29 20:35:14 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-29.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-29 20:35:14 [scrapy.extensions.telnet] INFO: Telnet Password: d6d1821d9bd9bce8
+2021-06-29 20:35:14 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-29 20:35:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-29 20:35:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-29 20:35:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-29 20:35:14 [scrapy.core.engine] INFO: Spider opened
+2021-06-29 20:35:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:35:14 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-29 20:36:54 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-29 20:36:54 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2021-06-29 20:36:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-29 20:36:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 487,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 99.815696,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 29, 12, 36, 54, 723217),
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 29, 12, 35, 14, 907521)}
+2021-06-29 20:36:54 [scrapy.core.engine] INFO: Spider closed (finished)

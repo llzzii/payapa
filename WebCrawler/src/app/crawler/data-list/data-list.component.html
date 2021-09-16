@@ -1,0 +1,55 @@
+<div class="page-title">
+  <h4>项目列表</h4>
+
+</div>
+
+<div class="padding-content area-col-white">
+  <div class="table-top ">
+
+
+    <div class="table-operations clearfix ">
+      <div class="pull-left">
+
+        <app-create (getProjectDatas)="getProjectDatas()"></app-create>
+      </div>
+      <div class="pull-right">
+        <nz-select nzShowSearch nzAllowClear [(ngModel)]="projectId" (ngModelChange)="getProjectDatas()"
+          class="table-top-input">
+          <nz-option *ngFor="let item of projectDatas" [nzLabel]="item" [nzValue]="item"></nz-option>
+
+        </nz-select>
+        <button nz-button class="table-top-opt" (click)="getProjectDatas(true)">
+          <i class="iconfont icon-shuaxin"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <nz-table #nzTable [nzData]="dataSet" nzShowSizeChanger nzSize="middle" [nzShowTotal]="rangeTemplate"
+    [nzLoading]="isLoading" (nzPageIndexChange)="getProjectDatas()" (nzPageSizeChange)="getProjectDatas()"
+    class="table-fixed" [nzFrontPagination]="false" [nzTotal]="totalCount" [(nzPageIndex)]="current"
+    [(nzPageSize)]="pageSize">
+    <thead>
+      <tr>
+        <th nzWidth="120px" *ngFor="let header of headerList">{{header}}</th>
+        <th nzWidth="180px">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of nzTable.data; let i = index">
+
+        <td *ngFor="let header of headerList">{{data[header] || '--'}}</td>
+
+
+        <td class="table-opt">
+
+          <app-action (getProjectDatas)="getProjectDatas()" [rowData]="data"></app-action>
+        </td>
+      </tr>
+    </tbody>
+
+    <ng-template #rangeTemplate let-range="range" let-total>
+      <!--第{{range[0]}}-{{range[1]<=total ? range[1] : total}}条 -->共{{total}}条
+    </ng-template>
+  </nz-table>
+
+</div>

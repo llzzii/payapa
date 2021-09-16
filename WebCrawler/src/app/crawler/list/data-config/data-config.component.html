@@ -1,0 +1,95 @@
+<form nz-form [formGroup]="dataConfigForm">
+  <nz-form-item>
+    <nz-form-label>主数据<span class="required-icon">*</span></nz-form-label>
+    <nz-form-control>
+      <ng-container formArrayName="dataLocation" *ngFor="let control of dataLocation.controls; let x = index;">
+        <div [formGroupName]="x" class="item">
+          <nz-form-control nz-popover [nzPopoverContent]="contentTemplate">
+            <input nz-input class="input" formControlName="val" placeholder="请输入">
+            <svg class="icon icon-i" aria-hidden="true">
+              <use xlink:href="#icon-right"></use>
+            </svg>
+            <ng-template #contentTemplate><a (click)="removeField(x,'dataLocation')"> <svg class="icon icon-i"
+                  aria-hidden="true">
+                  <use xlink:href="#icon-minus-circle"></use>
+                </svg></a></ng-template>
+          </nz-form-control>
+        </div>
+      </ng-container>
+      <div class="add-btn">
+        <a (click)="addField($event,'dataLocation')"> <svg class="icon icon-i" aria-hidden="true">
+            <use xlink:href="#icon-plus-circle"></use>
+          </svg></a>
+      </div>
+    </nz-form-control>
+
+  </nz-form-item>
+  <nz-form-item class="form-control-only-table ">
+    <nz-form-label>字段组<span class="required-icon">*</span></nz-form-label>
+    <nz-form-control>
+      <div class="form-control-table-wrapper">
+        <nz-table #nzTable nzShowPagination="false" nzSize="small" [nzNoResult]="null">
+          <thead>
+            <tr>
+
+              <th>value<span class="required-icon">*</span>
+              </th>
+              <th [nzWidth]="'80px'">type<span class="required-icon">*</span>
+              </th>
+              <th [nzWidth]="'80px'">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container formArrayName="fieldsList" *ngFor="let control of fieldsList.controls; let i = index;">
+              <tr [formGroupName]="i">
+                <td>
+                  <nz-form-control>
+                    <ng-template formArrayName="field" ngFor let-item="item" [ngForOf]="field(control).controls"
+                      let-j="index">
+                      <div [formGroupName]="j" class="item">
+                        <nz-form-control nz-popover [nzPopoverContent]="contentTemplate">
+                          <input nz-input class="input" formControlName="val" placeholder="请输入">
+                          <svg class="icon icon-i" aria-hidden="true">
+                            <use xlink:href="#icon-right"></use>
+                          </svg>
+                          <ng-template #contentTemplate><a (click)="removeField3(j,i)"> <svg class="icon icon-i"
+                                aria-hidden="true">
+                                <use xlink:href="#icon-minus-circle"></use>
+                              </svg></a></ng-template>
+                        </nz-form-control>
+                      </div>
+                    </ng-template>
+                    <div class="add-btn">
+                      <a (click)="addField3($event,i)"> <svg class="icon icon-i" aria-hidden="true">
+                          <use xlink:href="#icon-plus-circle"></use>
+                        </svg></a>
+                    </div>
+                  </nz-form-control>
+                </td>
+                <td>
+                  <nz-form-control>
+                    <nz-select formControlName="type">
+                      <nz-option nzValue="String" nzLabel="String"></nz-option>
+                      <nz-option nzValue="Number" nzLabel="Number"></nz-option>
+                      <nz-option nzValue="Dictionary" nzLabel="Dictionary"></nz-option>
+                      <nz-option nzValue="List" nzLabel="List"></nz-option>
+                      <nz-option nzValue="Tuple" nzLabel="Tuple"></nz-option>
+                      <nz-option nzValue="Float" nzLabel="Float"></nz-option>
+                      <nz-option nzValue="Set" nzLabel="Set"></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </td>
+                <td>
+                  <a (click)="removeField(i,'fieldsList')">删除</a>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </nz-table>
+        <div class="add-btn">
+          <a (click)="addField1($event,'fieldsList')"><i class="fas fa-plus"></i> 添加一行</a>
+        </div>
+      </div>
+    </nz-form-control>
+  </nz-form-item>
+</form>

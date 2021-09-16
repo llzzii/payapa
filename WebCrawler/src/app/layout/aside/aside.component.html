@@ -1,0 +1,32 @@
+<aside>
+  <!-- <button nz-button nzType="primary" (click)="toggleCollapsed()">
+
+  </button> -->
+  <ul nz-menu nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+    <li nz-menu-item>
+      <a [routerLink]="['/crawler/list']" routerLinkActive="active">项目</a>
+    </li>
+    <li nz-menu-item>
+      <a [routerLink]="['/crawler/data']" routerLinkActive="active">数据</a>
+    </li>
+    <li nz-submenu nzTitle="Navigation Two">
+      <ul>
+        <li nz-menu-item>Option 5</li>
+        <li nz-menu-item>Option 6</li>
+        <li nz-submenu nzTitle="Submenu">
+          <ul>
+            <li nz-menu-item>Option 7</li>
+            <li nz-menu-item>Option 8</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu nzTitle="Navigation Three">
+      <ul>
+        <li nz-menu-item>Option 9</li>
+        <li nz-menu-item>Option 10</li>
+        <li nz-menu-item>Option 11</li>
+      </ul>
+    </li>
+  </ul>
+</aside>

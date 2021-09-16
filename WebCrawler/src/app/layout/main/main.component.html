@@ -1,0 +1,9 @@
+<app-nav></app-nav>
+<div id="page-main" [style.height.px]="mainHeight" #pageMain>
+  <app-aside></app-aside>
+  <div class="container clearfix">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

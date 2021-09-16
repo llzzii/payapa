@@ -1,0 +1,141 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 100px;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  color: #595959;
+  font-size: 0.12rem;
+  overflow: hidden;
+  word-break: break-all;
+}
+.page-title {
+  height: auto;
+  margin: 0 -0.16rem 0.12rem;
+  padding: 0 0.16rem;
+  clear: both;
+  position: relative;
+  h4 {
+    font-size: 0.18rem;
+    line-height: 0.28rem;
+    font-weight: 400;
+    color: #262626;
+    font-variant: tabular-nums;
+    clear: both;
+  }
+}
+.padding-content {
+  padding: 0.16rem;
+  min-height: 5rem;
+}
+.table-top {
+  min-height: 0.42rem;
+  padding: 0 0 0.12rem;
+}
+.area-col-white {
+  background: #fff;
+}
+.table-top .table-operations {
+  width: 100%;
+  position: relative;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.table-top-opt {
+  margin-right: 0.08rem;
+}
+:host ::ng-deep .ant-table .ant-table-tbody > tr > td,
+:host ::ng-deep .ant-table .ant-table-thead > tr > th {
+  padding: 0.1rem 0.08rem;
+  line-height: 0.2rem;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+:host ::ng-deep .ant-table .ant-table-thead > tr > th {
+  color: #262626;
+}
+:host ::ng-deep .ant-table-thead > tr > th {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  text-align: left;
+  background: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+  transition: background 0.3s ease;
+}
+
+.ant-modal-body .ant-form-item {
+  margin-bottom: 0.12rem;
+}
+
+.ant-form .ant-form-item-label {
+  width: 1.28rem;
+  font-size: 0.14rem;
+  line-height: 0.3999rem;
+  font-weight: 400;
+  color: #595959;
+  text-align: left;
+  float: left;
+}
+.ant-form nz-form-item nz-form-control {
+  position: relative;
+  width: 100% !important;
+  float: none !important;
+  line-height: 40px;
+}
+.ant-modal-body .ant-form-item-label label,
+.ant-modal-body .ant-form-static label {
+  font-size: 0.12rem;
+  color: #919191;
+}
+
+.required-icon {
+  padding-left: 0.04rem;
+  color: #cc3a21;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+.ant-table .table-opt a {
+  margin-right: 0.1rem;
+}
+
+.ant-table .ant-table-tbody > tr > td p {
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 0.05rem;
+  height: auto;
+  background-color: #fff;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 0.05rem;
+  height: 0.05rem;
+  background-color: inherit;
+}
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 0.1rem;
+  background-color: #b9b9b9;
+}
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  border-radius: 0.1rem;
+  background-color: #f0f0f0;
+}

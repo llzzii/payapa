@@ -1,0 +1,208 @@
+<button nz-button nzType="primary" (click)="add(addModel)" class="btn-add"><i class="fas fa-plus"></i>
+  新增</button>
+
+<ng-template #addModel>
+
+  <form nz-form [formGroup]="addForm">
+    <nz-form-item>
+      <nz-form-label>项目名称<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <input nz-input formControlName="name" placeholder="请输入">
+        <p class="from-help help-text">
+          3-36个字符，只能英文字母
+        </p>
+      </nz-form-control>
+
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label>URL<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <input nz-input formControlName="url" placeholder="请输入">
+
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label>请求方式<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <nz-select formControlName="method">
+          <nz-option nzValue="GET" nzLabel="GET"></nz-option>
+          <nz-option nzValue="POST" nzLabel="POST"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="form-control-only-table ">
+      <nz-form-label>请求头<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <div class="form-control-table-wrapper">
+          <nz-table #nzTable nzShowPagination="false" nzSize="small" [nzNoResult]="null">
+            <thead>
+              <tr>
+                <th>key<span class="required-icon">*</span>
+                </th>
+                <th>value<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">type<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container formArrayName="headerList" *ngFor="let control of headerList.controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="keys" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="val" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <nz-select formControlName="type">
+                        <nz-option nzValue="String" nzLabel="String"></nz-option>
+                        <nz-option nzValue="Number" nzLabel="Number"></nz-option>
+                        <nz-option nzValue="Dictionary" nzLabel="Dictionary"></nz-option>
+                        <nz-option nzValue="List" nzLabel="List"></nz-option>
+                        <nz-option nzValue="Tuple" nzLabel="Tuple"></nz-option>
+                        <nz-option nzValue="Float" nzLabel="Float"></nz-option>
+                        <nz-option nzValue="Set" nzLabel="Set"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <a *ngIf="headerList.length == 1" disabled>删除</a>
+                    <a *ngIf="headerList.length > 1" (click)="removeField(i,'headerList')">删除</a>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </nz-table>
+          <div class="add-btn">
+            <a (click)="addField($event,'headerList')"><i class="fas fa-plus"></i> 添加一行</a>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="form-control-only-table ">
+      <nz-form-label>请求参数<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <div class="form-control-table-wrapper">
+          <nz-table #nzTable nzShowPagination="false" nzSize="small" [nzNoResult]="null">
+            <thead>
+              <tr>
+                <th>key<span class="required-icon">*</span>
+                </th>
+                <th>value<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">type<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container formArrayName="paramList" *ngFor="let control of paramList.controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="keys" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="val" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <nz-select formControlName="type">
+                        <nz-option nzValue="String" nzLabel="String"></nz-option>
+                        <nz-option nzValue="Number" nzLabel="Number"></nz-option>
+                        <nz-option nzValue="Dictionary" nzLabel="Dictionary"></nz-option>
+                        <nz-option nzValue="List" nzLabel="List"></nz-option>
+                        <nz-option nzValue="Tuple" nzLabel="Tuple"></nz-option>
+                        <nz-option nzValue="Float" nzLabel="Float"></nz-option>
+                        <nz-option nzValue="Set" nzLabel="Set"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <a *ngIf="paramList.length == 1" disabled>删除</a>
+                    <a *ngIf="paramList.length > 1" (click)="removeField(i,'paramList')">删除</a>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </nz-table>
+          <div class="add-btn">
+            <a (click)="addField($event,'paramList')"><i class="fas fa-plus"></i> 添加一行</a>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item class="form-control-only-table ">
+      <nz-form-label>请求BODY<span class="required-icon">*</span></nz-form-label>
+      <nz-form-control>
+        <div class="form-control-table-wrapper">
+          <nz-table #nzTable nzShowPagination="false" nzSize="small" [nzNoResult]="null">
+            <thead>
+              <tr>
+                <th>key<span class="required-icon">*</span>
+                </th>
+                <th>value<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">type<span class="required-icon">*</span>
+                </th>
+                <th [nzWidth]="'80px'">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container formArrayName="bodyList" *ngFor="let control of bodyList.controls; let i = index;">
+                <tr [formGroupName]="i">
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="keys" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <input nz-input formControlName="val" placeholder="请输入">
+
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <nz-form-control>
+                      <nz-select formControlName="type">
+                        <nz-option nzValue="String" nzLabel="String"></nz-option>
+                        <nz-option nzValue="Number" nzLabel="Number"></nz-option>
+                        <nz-option nzValue="Dictionary" nzLabel="Dictionary"></nz-option>
+                        <nz-option nzValue="List" nzLabel="List"></nz-option>
+                        <nz-option nzValue="Tuple" nzLabel="Tuple"></nz-option>
+                        <nz-option nzValue="Set" nzLabel="Set"></nz-option>
+                        <nz-option nzValue="Float" nzLabel="Float"></nz-option>
+                      </nz-select>
+                    </nz-form-control>
+                  </td>
+                  <td>
+                    <a *ngIf="bodyList.length == 1" disabled>删除</a>
+                    <a *ngIf="bodyList.length > 1" (click)="removeField(i,'bodyList')">删除</a>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </nz-table>
+          <div class="add-btn">
+            <a (click)="addField($event,'bodyList')"><i class="fas fa-plus"></i> 添加一行</a>
+          </div>
+        </div>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</ng-template>

@@ -1,0 +1,644 @@
+2021-06-30 08:51:09 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 08:51:09 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 08:51:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 08:51:10 [scrapy.extensions.telnet] INFO: Telnet Password: d61c60bdf59def7e
+2021-06-30 08:51:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 08:51:11 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 08:51:11 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 08:51:11 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 08:51:11 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 08:51:11 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 08:51:11 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 08:52:08 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 08:52:08 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 08:52:08 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 487,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 56.320114,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 0, 52, 8, 81473),
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 0, 51, 11, 761359)}
+2021-06-30 08:52:08 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 08:54:19 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 08:54:19 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 08:54:19 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 08:54:19 [scrapy.extensions.telnet] INFO: Telnet Password: 16d2d9f7ef10e86a
+2021-06-30 08:54:19 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 08:54:19 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 08:54:19 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 08:54:19 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 08:54:19 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 08:54:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 08:54:20 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 08:57:21 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 08:57:21 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 08:57:21 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 08:57:21 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 481,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 686,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 181.082174,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 0, 57, 21, 82726),
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 0, 54, 20, 552)}
+2021-06-30 08:57:21 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 08:58:08 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 08:58:08 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 08:58:08 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 08:58:08 [scrapy.extensions.telnet] INFO: Telnet Password: c96edd458659dcaf
+2021-06-30 08:58:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 08:58:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 08:58:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 08:58:08 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 08:58:08 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 08:58:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 08:58:08 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 08:58:52 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 08:58:52 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 08:58:52 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 479,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 686,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 44.263071,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 0, 58, 52, 793801),
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 0, 58, 8, 530730)}
+2021-06-30 08:58:52 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:22:37 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:22:37 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:22:37 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:22:37 [scrapy.extensions.telnet] INFO: Telnet Password: 4e9195ad08883e25
+2021-06-30 09:22:38 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:22:38 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:22:38 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:22:38 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:22:38 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:22:38 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:22:38 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:22:54 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:22:54 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&> (referer: None)
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 112, in errback_httpbin
+    {'err_status': 'HttpError', 'content': response, 'crawler_name': self.obj['name']})
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 3294, in insert
+    check_keys, manipulate, write_concern)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 598, in _insert_command
+    retryable_write=retryable_write)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 699, in command
+    self._raise_connection_failure(error)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\network.py", line 122, in command
+    codec_options, ctx=compression_ctx)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\message.py", line 715, in _op_msg
+    flags, command, identifier, docs, check_keys, opts)
+bson.errors.InvalidDocument: cannot encode object: <403 https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&>, of type: <class 'scrapy.http.response.text.TextResponse'>
+2021-06-30 09:22:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:22:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 481,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 15.884685,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 22, 54, 388245),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/InvalidDocument': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 22, 38, 503560)}
+2021-06-30 09:22:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:25:15 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:25:15 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:25:15 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:25:16 [scrapy.extensions.telnet] INFO: Telnet Password: edc5bc8d9e611f2d
+2021-06-30 09:25:16 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:25:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:25:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:25:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:25:17 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:25:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:25:17 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:25:32 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:25:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&> (referer: None)
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 112, in errback_httpbin
+    {'err_status': 'HttpError', 'content': response, 'crawler_name': self.obj['name']})
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 3294, in insert
+    check_keys, manipulate, write_concern)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 598, in _insert_command
+    retryable_write=retryable_write)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 699, in command
+    self._raise_connection_failure(error)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\network.py", line 122, in command
+    codec_options, ctx=compression_ctx)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\message.py", line 715, in _op_msg
+    flags, command, identifier, docs, check_keys, opts)
+bson.errors.InvalidDocument: cannot encode object: <403 https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&>, of type: <class 'scrapy.http.response.text.TextResponse'>
+2021-06-30 09:25:49 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:25:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 481,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 686,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 36.97889,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 25, 54, 150864),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/InvalidDocument': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 25, 17, 171974)}
+2021-06-30 09:25:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:42:56 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:42:56 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:42:56 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:42:56 [scrapy.extensions.telnet] INFO: Telnet Password: 169f338467638107
+2021-06-30 09:42:56 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:42:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:42:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:42:56 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:42:56 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:42:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:42:56 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:43:02 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:43:03 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&> (referer: None)
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 112, in errback_httpbin
+    dict({'err_status': 'HttpError', 'content': response, 'crawler_name': self.obj['name']}))
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 3294, in insert
+    check_keys, manipulate, write_concern)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 598, in _insert_command
+    retryable_write=retryable_write)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 699, in command
+    self._raise_connection_failure(error)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\network.py", line 122, in command
+    codec_options, ctx=compression_ctx)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\message.py", line 715, in _op_msg
+    flags, command, identifier, docs, check_keys, opts)
+bson.errors.InvalidDocument: cannot encode object: <403 https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&>, of type: <class 'scrapy.http.response.text.TextResponse'>
+2021-06-30 09:43:03 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:43:03 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 481,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 685,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 6.443441,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 43, 3, 381060),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/InvalidDocument': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 42, 56, 937619)}
+2021-06-30 09:43:03 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:44:09 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:44:09 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:44:09 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:44:09 [scrapy.extensions.telnet] INFO: Telnet Password: a9d699eb8b5c9d2b
+2021-06-30 09:44:09 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:44:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:44:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:44:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:44:10 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:44:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:44:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:44:53 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:46:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&> (referer: None)
+Traceback (most recent call last):
+  File "D:\Python3.7.6\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "E:\python\payapa\WebCrawler\api\application\crawler\crawler\spiders\project_crawler.py", line 112, in errback_httpbin
+    dict({'err_status': 'HttpError', 'content': response.text, 'crawler_name': self.obj['name']}))
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 3294, in insert
+    check_keys, manipulate, write_concern)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1498, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1384, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\mongo_client.py", line 1416, in _retry_internal
+    return func(session, sock_info, retryable)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\collection.py", line 598, in _insert_command
+    retryable_write=retryable_write)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 699, in command
+    self._raise_connection_failure(error)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\pool.py", line 694, in command
+    exhaust_allowed=exhaust_allowed)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\network.py", line 122, in command
+    codec_options, ctx=compression_ctx)
+  File "D:\Python3.7.6\lib\site-packages\pymongo\message.py", line 715, in _op_msg
+    flags, command, identifier, docs, check_keys, opts)
+bson.errors.InvalidDocument: cannot encode object: <403 https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&>, of type: <class 'scrapy.http.response.text.TextResponse'>
+2021-06-30 09:46:42 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:46:42 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:46:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 426,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 686,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 152.799466,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 46, 42, 862432),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/InvalidDocument': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 44, 10, 62966)}
+2021-06-30 09:46:42 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:47:12 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:47:12 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:47:12 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:47:12 [scrapy.extensions.telnet] INFO: Telnet Password: 868194b60f952ebb
+2021-06-30 09:47:12 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:47:12 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:47:12 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:47:12 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:47:12 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:47:12 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:47:12 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:47:16 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:47:18 [project_crawler] ERROR: HttpError on https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&
+2021-06-30 09:47:18 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:47:18 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 426,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 686,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 5.725684,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 47, 18, 388679),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 11,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 47, 12, 662995)}
+2021-06-30 09:47:18 [scrapy.core.engine] INFO: Spider closed (finished)
+2021-06-30 09:48:10 [scrapy.utils.log] INFO: Scrapy 2.3.0 started (bot: crawler)
+2021-06-30 09:48:10 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 20.3.0, Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Windows-10-10.0.17134-SP0
+2021-06-30 09:48:10 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'crawler',
+ 'LOG_FILE': '../log/2021-6-30.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'crawler.spiders',
+ 'SPIDER_MODULES': ['crawler.spiders']}
+2021-06-30 09:48:10 [scrapy.extensions.telnet] INFO: Telnet Password: 2b2728ed8294fff3
+2021-06-30 09:48:10 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2021-06-30 09:48:10 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-06-30 09:48:10 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-06-30 09:48:10 [scrapy.middleware] INFO: Enabled item pipelines:
+['crawler.pipelines.CrawlerPipeline',
+ 'crawler.JsonExporterPipleline.JsonExporterPipleline']
+2021-06-30 09:48:10 [scrapy.core.engine] INFO: Spider opened
+2021-06-30 09:48:10 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:48:10 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2021-06-30 09:48:14 [project_crawler] INFO: <twisted.python.failure.Failure scrapy.spidermiddlewares.httperror.HttpError: Ignoring non-200 response>
+2021-06-30 09:51:22 [project_crawler] ERROR: HttpError on https://www.zhihu.com/api/v4/search_v3?t=general&&q=%E8%AE%A1%E7%AE%97%E6%9C%BA&&correction=1&&offset=0&&limit=100&&lc_idx=0&&show_all_topics=0&&
+2021-06-30 09:51:22 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2021-06-30 09:51:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-06-30 09:51:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 426,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 688,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/403': 1,
+ 'elapsed_time_seconds': 191.572825,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 6, 30, 1, 51, 22, 277580),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 12,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2021, 6, 30, 1, 48, 10, 704755)}
+2021-06-30 09:51:22 [scrapy.core.engine] INFO: Spider closed (finished)
